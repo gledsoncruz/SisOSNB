@@ -1,0 +1,30 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+    <h:head>
+        <title>CenterClick - Sistema de Controle de Ordem de Serviço</title>
+          <h:outputStylesheet library="css" name="theme.css"/>
+    </h:head>
+    <h:body>
+       
+            <p:dialog header="Login" visible="true" closable="false" draggable="false" resizable="false" width="420">
+                <center>
+                    <h:outputText value="Usuário ou senha incorretos!" rendered="#{param.erro}" style="color: red"/>
+                </center>
+                <form action="j_spring_security_check" method="post">
+                    <h:panelGrid columns="2" cellpadding="5">
+                        <h:outputLabel for="j_username" value="Username:" />
+                        <h:inputText id="j_username" required="true"/>
+                        <h:outputLabel for="j_password" value="Password:" />
+                        <h:inputSecret id="j_password" required="true"/>
+                        <h:commandButton value="Login"/>
+                    </h:panelGrid>
+                </form>
+            </p:dialog>
+
+
+
+    </h:body>
+</html>
+

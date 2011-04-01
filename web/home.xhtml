@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+    <h:head>
+        <title>CenterClick</title>
+        <h:outputStylesheet library="css" name="theme.css"/>
+    </h:head>
+    <h:body>
+        Home <a href="#{facesContext.externalContext.request.contextPath}/j_spring_security_logout">Logout</a>
+
+        <h:panelGrid>
+
+
+            <p:messages />
+
+
+
+            <p:dialog header="Cadastrar Peça" visible="true" closable="false" draggable="false" resizable="false" width="420">
+                <h:form prependId="false">
+                    <h:panelGrid columns="2">
+
+                        <h:outputLabel value="Descrição:"/>
+
+                        <h:inputText id="descricao" value="#{pecaController.peca.descricao}" required="true" requiredMessage="Campo [Matricula] obrigatório"/>
+
+                        <h:outputLabel value="Valor:"/>
+
+                        <h:inputText id="valor" value="#{pecaController.peca.valor}" required="true" requiredMessage="Campo [Nome Completo] obrigatório"/>
+
+
+
+                        <h:commandButton action="#{pecaController.salvar}" value="Inserir" />
+
+                    </h:panelGrid>
+                </h:form>
+            </p:dialog>
+
+
+        </h:panelGrid>
+
+    </h:body>
+</html>
+
