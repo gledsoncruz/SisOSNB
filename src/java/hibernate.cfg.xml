@@ -6,7 +6,7 @@
     <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
     <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bdsisos</property>
     <property name="hibernate.connection.username">gledsoncruz</property>
-    <property name="hibernate.connection.password">gc07121978</property>
+    <property name="hibernate.connection.password">teste</property>
     <!--
     <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
     <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
